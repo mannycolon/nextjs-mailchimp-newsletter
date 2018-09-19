@@ -1,6 +1,6 @@
 import express from 'express'
 import next from 'next'
-import helmet from 'helmet';
+import helmet from 'helmet'
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = parseInt(process.env.PORT, 10) || 8000
@@ -15,6 +15,24 @@ app.prepare()
     const server = express()
 
     server.use(helmet());
+
+    server.use(express.json());
+
+    server.post('/api/v1/public/subscribe', async (req, res) => {
+      const { email } = req.body
+
+      if (!email) {
+        res.json({ error: 'Email is required' })
+        return
+      }
+
+      try {
+        res.json({ subscribed: 1 })
+        console.log(email)
+      } catch (error) {
+        res.json({ error: error.message || error.toString() });
+      }
+    })
 
     server.get('*', (req, res) => handle(req, res));
 

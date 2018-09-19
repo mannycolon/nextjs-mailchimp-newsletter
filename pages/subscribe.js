@@ -37,7 +37,7 @@ class Subscribe extends Component {
 
       NProgress.done()
     } catch (error) {
-      console.log(err)
+      console.log(error)
       NProgress.done()
     }
   }
