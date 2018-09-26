@@ -1,7 +1,7 @@
 {
-  "name": "nextjs-boilerplate",
+  "name": "nextjs-mailchimp-newsletter",
   "version": "0.1.0",
-  "description": "",
+  "description": "Mailchimp newsletter with next.js",
   "scripts": {
     "build": "npm run build:next && npm run build:server",
     "build:next": "next build",
