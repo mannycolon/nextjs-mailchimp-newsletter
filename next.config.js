@@ -9,13 +9,16 @@ module.exports = withSass({
 
     config.plugins = [
       ...config.plugins,
-
-      // Read the .env file
-      new Dotenv({
-        path: path.join(__dirname, '.env'),
-        systemvars: true
-      })
     ]
+    if (process.env.NODE_ENV !== 'production') {
+      // Read the .env file
+      config.plugins.push(
+        new Dotenv({
+          path: path.join(__dirname, '.env'),
+          systemvars: true
+        })
+      )
+    }
 
     config.node = {
       console: false,
