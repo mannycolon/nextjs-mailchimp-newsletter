@@ -5,8 +5,6 @@ import NProgress from 'nprogress'
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
 import Toolbar from '@material-ui/core/Toolbar'
-import Avatar from '@material-ui/core/Avatar'
-
 
 Router.onRouteChangeStart = () => {
   NProgress.start()
@@ -17,6 +15,7 @@ Router.onRouteChangeError = () => NProgress.done()
 const styles = {
   root: {
     flexGrow: 1,
+    fontFamily: 'Prime'
   }
 }
 
@@ -26,15 +25,8 @@ const Header = ({ classes }) => (
       <Toolbar>
         <Link prefetch href="/" as="/">
           <a>
-            <Avatar
-              src="https://storage.googleapis.com/builderbook/logo.svg"
-              alt="Builder Book logo"
-              style={{ margin: '0px auto 0px 20px' }}
-            />
+            <h3>MannyColon.tech</h3>
           </a>
-        </Link>
-        <Link prefetch href="/login" as="/login">
-          <a style={{ margin: '0px 20px 0px auto' }}>Log in</a>
         </Link>
       </Toolbar>
     </AppBar>

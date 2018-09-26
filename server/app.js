@@ -1,6 +1,7 @@
 import express from 'express'
 import next from 'next'
 import helmet from 'helmet'
+import { subscribe } from './mailchimp'
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = parseInt(process.env.PORT, 10) || 8000
@@ -27,6 +28,7 @@ app.prepare()
       }
 
       try {
+        await subscribe({ email })
         res.json({ subscribed: 1 })
         console.log(email)
       } catch (error) {
