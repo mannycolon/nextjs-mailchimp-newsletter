@@ -8,7 +8,7 @@
     "build:server": "babel server -d compiled/server",
     "start": "node compiled/server/app.js",
     "dev": "nodemon server/app.js --watch server --exec babel-node",
-    "now": "now && now alias",
+    "now": "now --public && now alias",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

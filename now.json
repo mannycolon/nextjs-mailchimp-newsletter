@@ -1,5 +1,7 @@
 {
+  "alias": "mannycolon-newsletter",
   "env": {
+    "NODE_ENV": "production",
     "MAILCHIMP_API_KEY": "@mailchimp-api-key",
     "MAILCHIMP_LIST_ID": "@mailchimp-list-id"
   }
