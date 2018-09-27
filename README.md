@@ -1,9 +1,3 @@
-# nextjs-boilerplate
-Next.js boilerplate setup
+# nextjs-mailchimp-newsletter
 
-### Includes
-- scss
-- material-ui
-- ES6 for custom server
-- eslint
-- dotenv
+Mailchimp newsletter with next.js
